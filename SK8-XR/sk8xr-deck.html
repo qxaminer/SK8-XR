@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SK8-XR -- XR Venture Pitch 2026</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -14,33 +14,33 @@
   --amber:#BA7517;--amber-lt:#FAEEDA;
   --border:rgba(0,0,0,0.08);--white:#ffffff;--dark:#0a0a0a;
 }
-.reveal{font-family:'Inter',sans-serif;background:var(--bg);}
-.reveal .slides{text-align:left;}
-.reveal .slides section{background:transparent;padding:0;}
+.reveal{font-family:'DM Sans',sans-serif;background:var(--bg);overflow:visible !important;}
+.reveal .slides{text-align:left;overflow:visible !important;}
+.reveal .slides section{background:transparent;padding:0;overflow:visible !important;}
 .reveal .progress{color:var(--rule);height:3px;}
 .reveal .controls{color:var(--rule);}
 
-.s{width:1280px;height:720px;padding:52px 68px;display:flex;flex-direction:column;
-   justify-content:center;position:relative;background:var(--bg);overflow:hidden;}
+.s{width:1280px;height:720px;padding:40px 64px 32px 64px;display:flex;flex-direction:column;
+   justify-content:flex-start;position:relative;background:var(--bg);overflow:visible !important;}
 .s::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--rule);}
 .sf{padding:0;width:1280px;height:720px;position:relative;overflow:hidden;background:var(--dark);}
 
-.ey{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;
-    color:var(--rule2);margin-bottom:10px;}
+.ey{font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--rule2);margin-bottom:8px;}
 .ey-lt{color:#5DCAA5;}
 
-.h1{font-family:'Syne',sans-serif;font-size:72px;font-weight:800;color:var(--ink);
-    line-height:0.93;letter-spacing:-0.03em;margin-bottom:14px;}
+.h1{font-family:'Syne',sans-serif;font-size:80px;font-weight:800;color:var(--ink);
+    line-height:0.96;letter-spacing:-0.03em;margin-bottom:14px;padding-bottom:8px;}
 .h1-lt{color:#f5f5f0;}
-.h2{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:var(--ink);
-    line-height:1.0;letter-spacing:-0.02em;margin-bottom:16px;}
+.h2{font-family:'Syne',sans-serif;font-size:44px;font-weight:800;color:var(--ink);
+    line-height:1.08;letter-spacing:-0.02em;margin-bottom:16px;padding-bottom:6px;}
 .h2-lt{color:#f5f5f0;}
 
 .brand{position:absolute;bottom:22px;left:68px;font-family:'Syne',sans-serif;
        font-size:11px;font-weight:800;color:var(--rule);letter-spacing:0.12em;}
 .brand-lt{color:var(--rule);}
 .snum{position:absolute;bottom:22px;right:68px;font-size:11px;
-      color:var(--muted);font-family:'Inter',sans-serif;letter-spacing:0.06em;}
+      color:var(--muted);font-family:'DM Sans',sans-serif;letter-spacing:0.06em;}
 .snum-lt{color:#555;}
 
 .tag{display:inline-block;font-size:9px;font-weight:600;padding:3px 10px;
@@ -59,18 +59,18 @@
 .cb{border-top:3px solid var(--amber);}
 .cc{border-left:3px solid var(--rule);border-radius:0 8px 8px 0;}
 
-.clabel{font-size:9px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+.clabel{font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
         color:var(--muted);margin-bottom:4px;}
-.ctitle{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;
+.ctitle{font-family:'Syne',sans-serif;font-size:15px;font-weight:700;
         color:var(--ink);margin-bottom:4px;}
-.cbody{font-size:11px;color:var(--ink2);line-height:1.5;}
-.stat{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;
+.cbody{font-size:13px;color:var(--ink2);line-height:1.55;}
+.stat{font-family:'Syne',sans-serif;font-size:44px;font-weight:800;
       color:var(--rule);line-height:1;margin-bottom:4px;}
 .stat-a{color:var(--amber);}
 .cite{font-size:8px;color:var(--muted);vertical-align:super;font-weight:600;}
 
 .pl{list-style:none;}
-.pl li{font-size:11px;color:var(--ink2);padding:3px 0;
+.pl li{font-size:12px;color:var(--ink2);padding:3px 0;
        border-bottom:0.5px solid rgba(0,0,0,0.05);
        display:flex;align-items:flex-start;gap:7px;line-height:1.4;}
 .pl li:last-child{border-bottom:none;}
@@ -92,10 +92,10 @@
 
 .sb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
 .sb-panel{background:var(--white);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;}
-.sb-screen{height:108px;background:#0d160d;display:flex;align-items:center;justify-content:center;}
-.sb-cap{padding:8px 10px;}
-.sb-n{font-size:9px;font-weight:600;color:var(--rule);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;}
-.sb-t{font-size:10px;color:var(--ink2);line-height:1.35;}
+.sb-screen{height:140px;background:#0d160d;display:flex;align-items:center;justify-content:center;}
+.sb-cap{padding:10px 12px;}
+.sb-n{font-size:10px;font-weight:600;color:var(--rule);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;}
+.sb-t{font-size:12px;color:var(--ink2);line-height:1.5;}
 
 .ms-track{position:relative;padding:8px 0 4px;margin-bottom:18px;}
 .ms-line{position:absolute;top:16px;left:0;right:0;height:2px;background:var(--border);}
@@ -109,7 +109,7 @@
         line-height:1.3;max-width:78px;}
 .ms-dt{font-size:9px;color:var(--muted);text-align:center;}
 
-.bib{font-size:11px;color:var(--ink2);line-height:1.6;padding:5px 0;
+.bib{font-size:12px;color:var(--ink2);line-height:1.6;padding:5px 0;
      border-bottom:0.5px solid rgba(0,0,0,0.06);}
 .bib:last-child{border-bottom:none;}
 .bn{font-weight:600;color:var(--rule2);margin-right:4px;}
@@ -121,6 +121,71 @@
 .co-c{background:rgba(34,211,238,0.08);border:0.5px solid rgba(34,211,238,0.35);}
 .co-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2px;}
 .co-txt{font-size:11px;color:#f5f5f0;margin:0;}
+
+/* === Loader embed (slide 04 Discover) === */
+.loader-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:340px;background:#080808;gap:32px;}
+.wheel-scene{position:relative;width:160px;height:160px;}
+.wheel-svg{animation:spin-wheel 1.4s linear infinite;position:absolute;inset:0;}
+@keyframes spin-wheel{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.text-ring{position:absolute;inset:0;animation:spin-text 4s linear infinite;}
+@keyframes spin-text{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
+.btn-row{display:flex;gap:14px;align-items:center;}
+.load-btn{display:flex;align-items:center;gap:10px;background:transparent;border:0.5px solid #333;border-radius:100px;padding:12px 24px;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;color:#888;}
+.load-btn.active{border-color:#4ade80;color:#4ade80;}
+.mini-wheel{width:20px;height:20px;animation:spin-wheel 1.4s linear infinite;}
+.status{font-family:'DM Sans',sans-serif;font-size:11px;color:#333;letter-spacing:0.1em;text-transform:uppercase;animation:blink 1.4s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:0.3;}50%{opacity:1;}}
+
+/* === Skater POV embed (slide 04 Learn) === */
+.pov-wrap{position:relative;background:#080808;font-family:'DM Sans',sans-serif;overflow:hidden;}
+.camera-feed{width:100%;height:480px;position:relative;overflow:hidden;}
+.env-bg{position:absolute;inset:0;background:linear-gradient(180deg,#1a2a1a 0%,#111811 40%,#0d1a0d 60%,#0a120a 100%);}
+.sky{position:absolute;top:0;left:0;right:0;height:38%;background:linear-gradient(180deg,#0d1a0d 0%,#111e11 100%);}
+.horizon-line{position:absolute;top:38%;left:0;right:0;height:0.5px;background:rgba(74,222,128,0.15);}
+.ground{position:absolute;bottom:0;left:0;right:0;height:62%;}
+.ground svg{width:100%;height:100%;}
+.scan-pulse{position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent 0%,#4ade80 50%,transparent 100%);animation:scan-down 3s ease-in-out infinite;opacity:0.6;}
+@keyframes scan-down{0%{top:0;opacity:0.8;}70%{top:480px;opacity:0.2;}100%{top:480px;opacity:0;}}
+.ghost-figure{position:absolute;left:50%;transform:translateX(-50%);bottom:140px;animation:ghost-float 2.5s ease-in-out infinite;filter:drop-shadow(0 0 8px rgba(74,222,128,0.4));}
+@keyframes ghost-float{0%,100%{transform:translateX(-50%) translateY(0px);}50%{transform:translateX(-50%) translateY(-6px);}}
+.board-ghost{position:absolute;left:50%;bottom:128px;transform:translateX(-40%) rotate(-8deg);animation:board-spin 1.8s ease-in-out infinite;filter:drop-shadow(0 0 6px rgba(34,211,238,0.5));}
+@keyframes board-spin{0%{transform:translateX(-40%) rotate(-8deg) translateY(0px);}30%{transform:translateX(-30%) rotate(160deg) translateY(-22px) scaleX(0.7);}60%{transform:translateX(-50%) rotate(340deg) translateY(-8px);}80%{transform:translateX(-40%) rotate(-8deg) translateY(0px);}100%{transform:translateX(-40%) rotate(-8deg) translateY(0px);}}
+.surface-mesh{position:absolute;bottom:0;left:0;right:0;height:160px;opacity:0.3;}
+.corner-tl,.corner-tr,.corner-bl,.corner-br{position:absolute;width:22px;height:22px;border-color:#4ade80;border-style:solid;opacity:0.6;}
+.corner-tl{top:14px;left:14px;border-width:2px 0 0 2px;}
+.corner-tr{top:14px;right:14px;border-width:2px 2px 0 0;}
+.corner-bl{bottom:14px;left:14px;border-width:0 0 2px 2px;}
+.corner-br{bottom:14px;right:14px;border-width:0 2px 2px 0;}
+.surface-lock{position:absolute;top:18px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:6px;background:rgba(10,10,10,0.75);border:0.5px solid rgba(74,222,128,0.4);border-radius:100px;padding:5px 14px;}
+.lock-dot{width:6px;height:6px;border-radius:50%;background:#4ade80;animation:blink-dot 1.2s ease-in-out infinite;}
+@keyframes blink-dot{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.lock-text{font-size:10px;font-weight:500;color:#4ade80;letter-spacing:0.08em;text-transform:uppercase;}
+.distance-badge{position:absolute;top:55px;left:50%;transform:translateX(-50%);background:rgba(10,10,10,0.6);border:0.5px solid #222;border-radius:6px;padding:3px 10px;font-size:9px;color:#555;letter-spacing:0.06em;}
+.body-iso{position:absolute;top:18px;right:16px;display:flex;flex-direction:column;gap:5px;}
+.iso-pill{background:rgba(10,10,10,0.75);border:0.5px solid #2a2a2a;border-radius:6px;padding:4px 9px;font-size:9px;color:#555;text-transform:uppercase;letter-spacing:0.06em;cursor:pointer;}
+.iso-pill.on{border-color:#4ade80;color:#4ade80;background:rgba(74,222,128,0.08);}
+.trick-info{position:absolute;left:16px;bottom:168px;}
+.trick-phase-label{font-size:9px;color:#4ade80;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;}
+.trick-name-pov{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;color:#f0ede6;letter-spacing:-0.02em;text-shadow:0 2px 16px rgba(0,0,0,0.9);}
+.foot-indicators{position:absolute;bottom:138px;left:50%;transform:translateX(-50%);display:flex;gap:24px;}
+.foot-tag{font-size:8px;color:#22d3ee;background:rgba(34,211,238,0.08);border:0.5px solid rgba(34,211,238,0.3);border-radius:4px;padding:2px 7px;letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;}
+.hud-bottom{background:rgba(8,8,8,0.92);border-top:0.5px solid #1a1a1a;padding:10px 16px 14px;}
+.scrub-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
+.scrub-label{font-size:10px;color:#f0ede6;font-variant-numeric:tabular-nums;}
+.speed-tag{font-size:9px;color:#a78bfa;background:rgba(167,139,250,0.1);border:0.5px solid rgba(167,139,250,0.3);border-radius:100px;padding:2px 8px;}
+.scrubber{position:relative;height:4px;background:#1a1a1a;border-radius:2px;margin-bottom:10px;}
+.scrub-fill{height:4px;width:42%;background:#4ade80;border-radius:2px;}
+.kf{position:absolute;top:-3px;width:3px;height:10px;background:#fbbf24;border-radius:1px;opacity:0.8;}
+.scrub-thumb{position:absolute;left:42%;top:50%;transform:translate(-50%,-50%);width:14px;height:14px;background:#f0ede6;border-radius:50%;box-shadow:0 0 0 3px rgba(74,222,128,0.25);}
+.ctrl-row{display:flex;align-items:center;justify-content:space-between;}
+.ctrl-group{display:flex;align-items:center;gap:14px;}
+.ctrl-icon{background:transparent;border:none;cursor:pointer;}
+.play-btn{width:38px;height:38px;background:#4ade80;border-radius:50%;display:flex;align-items:center;justify-content:center;border:none;cursor:pointer;}
+.right-btns{display:flex;gap:8px;}
+.action-btn{font-size:10px;font-weight:500;padding:7px 14px;border-radius:100px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.btn-exit{background:transparent;border:0.5px solid #222;color:#444;}
+.btn-land{background:rgba(74,222,128,0.12);border:0.5px solid rgba(74,222,128,0.4);color:#4ade80;}
+.pov-label{position:absolute;top:18px;left:16px;font-size:9px;color:#333;letter-spacing:0.1em;text-transform:uppercase;}
 </style>
 </head>
 <body>
@@ -147,7 +212,7 @@
       <div style="border-top:0.5px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;gap:22px;">
         <div>
           <p style="font-size:10px;color:#555;margin-bottom:2px;">Presenter</p>
-          <p style="font-size:13px;font-weight:500;color:#f5f5f0;margin:0;">Patrick Barfield</p>
+          <p style="font-size:13px;font-weight:500;color:#f5f5f0;margin:0;">Vero Fields</p>
           <p style="font-size:10px;color:#555;margin:0;">MS Creative Technology, SMU</p>
         </div>
         <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
@@ -170,10 +235,11 @@
 
 <!-- 02 PROBLEM -->
 <section>
-<div class="s">
+<div class="s" style="justify-content:flex-start;padding-top:52px;">
   <p class="ey">The Problem</p>
-  <div class="h2">Skateboarding has<br>a gatekeeping problem.</div>
-  <div class="g3" style="margin-bottom:16px;">
+  <div class="h2" style="margin-bottom:28px;">Skateboarding has<br>a gatekeeping problem.</div>
+  <div style="height:40px;"></div>
+  <div class="g3" style="margin-bottom:10px;">
     <div class="card ca">
       <p class="clabel">The barrier</p>
       <p class="stat">73%</p>
@@ -191,7 +257,7 @@
     </div>
   </div>
   <div class="card cc" style="background:#f0f9f4;max-width:720px;">
-    <p style="font-size:13px;color:var(--ink2);font-style:italic;margin:0;">
+    <p style="font-size:13px;color:var(--ink2);font-style:italic;margin:0;font-family:'DM Serif Display',serif;">
       "Skateboarding is one of the last genuinely oral-tradition subcultures. Tricks are passed person to person, spot to spot. SK8-XR treats that transmission as a design problem."
     </p>
   </div>
@@ -274,18 +340,82 @@
   <div class="h2" style="margin-bottom:16px;">Storyboard</div>
   <div class="sb-grid">
     <div class="sb-panel">
-      <div class="sb-screen">
-        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
-          <circle cx="44" cy="44" r="26" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.4"/>
-          <circle cx="44" cy="44" r="4" fill="#4ade80"/>
-          <circle cx="44" cy="44" r="17" fill="none" stroke="#4ade80" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
-          <rect x="29" y="10" width="30" height="11" rx="3" fill="none" stroke="#4ade80" stroke-width="0.7"/>
-          <text x="44" y="19" text-anchor="middle" font-size="6" fill="#4ade80">Pease Park</text>
-          <rect x="7" y="62" width="22" height="8" rx="2" fill="none" stroke="#555" stroke-width="0.6"/>
-          <rect x="59" y="57" width="22" height="8" rx="2" fill="none" stroke="#555" stroke-width="0.6"/>
-          <text x="18" y="68" text-anchor="middle" font-size="5" fill="#555">12 tricks</text>
-          <text x="70" y="63" text-anchor="middle" font-size="5" fill="#555">5 tricks</text>
-        </svg>
+      <div class="sb-screen" style="overflow:hidden;display:block;padding:0;position:relative;">
+        <div style="width:874px;height:340px;transform:scale(0.318);transform-origin:top left;position:absolute;top:0;left:0;">
+          <div class="loader-wrap">
+            <div class="wheel-scene">
+              <svg class="wheel-svg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="80" cy="80" r="72" fill="#0f0f0f" stroke="#1e1e1e" stroke-width="1"/>
+                <circle cx="80" cy="80" r="56" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+                <circle cx="80" cy="80" r="72" fill="none" stroke="url(#rim-grad)" stroke-width="6"/>
+                <line x1="80" y1="8" x2="80" y2="152" stroke="#222" stroke-width="1.5"/>
+                <line x1="8" y1="80" x2="152" y2="80" stroke="#222" stroke-width="1.5"/>
+                <line x1="25" y1="25" x2="135" y2="135" stroke="#222" stroke-width="1.5"/>
+                <line x1="135" y1="25" x2="25" y2="135" stroke="#222" stroke-width="1.5"/>
+                <line x1="80" y1="8"   x2="80" y2="34"   stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="80" y1="126" x2="80" y2="152"  stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="8"  y1="80"  x2="34" y2="80"   stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="126" y1="80" x2="152" y2="80"  stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="29" y1="29" x2="47" y2="47"     stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="113" y1="113" x2="131" y2="131" stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="131" y1="29" x2="113" y2="47"   stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <line x1="29" y1="131" x2="47" y2="113"   stroke="#4ade80" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="80" cy="80" r="14" fill="#0a0a0a" stroke="#333" stroke-width="1.5"/>
+                <circle cx="80" cy="80" r="7"  fill="#4ade80" opacity="0.9"/>
+                <circle cx="80" cy="80" r="3"  fill="#080808"/>
+                <circle cx="80" cy="24" r="5" fill="#1a1a1a" stroke="#4ade80" stroke-width="1"/>
+                <circle cx="80" cy="136" r="5" fill="#1a1a1a" stroke="#4ade80" stroke-width="1"/>
+                <circle cx="24" cy="80" r="5" fill="#1a1a1a" stroke="#4ade80" stroke-width="1"/>
+                <circle cx="136" cy="80" r="5" fill="#1a1a1a" stroke="#4ade80" stroke-width="1"/>
+                <defs>
+                  <linearGradient id="rim-grad" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%"   stop-color="#4ade80"/>
+                    <stop offset="33%"  stop-color="#22d3ee"/>
+                    <stop offset="66%"  stop-color="#a78bfa"/>
+                    <stop offset="100%" stop-color="#4ade80"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg class="text-ring" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <path id="textcircle" d="M 80,80 m -46,0 a 46,46 0 1,1 92,0 a 46,46 0 1,1 -92,0"/>
+                </defs>
+                <text font-family="Syne, sans-serif" font-size="11.5" font-weight="800" fill="#4ade80" letter-spacing="5.2">
+                  <textPath href="#textcircle">SK8-XR · SK8-XR · SK8-XR ·</textPath>
+                </text>
+              </svg>
+            </div>
+            <div class="btn-row">
+              <button class="load-btn active">
+                <svg class="mini-wheel" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="80" cy="80" r="72" fill="#0f0f0f" stroke="none"/>
+                  <circle cx="80" cy="80" r="72" fill="none" stroke="url(#rim2)" stroke-width="8"/>
+                  <line x1="80" y1="8" x2="80" y2="152" stroke="#333" stroke-width="2"/>
+                  <line x1="8" y1="80" x2="152" y2="80" stroke="#333" stroke-width="2"/>
+                  <line x1="25" y1="25" x2="135" y2="135" stroke="#333" stroke-width="2"/>
+                  <line x1="135" y1="25" x2="25" y2="135" stroke="#333" stroke-width="2"/>
+                  <circle cx="80" cy="80" r="10" fill="#4ade80"/>
+                  <defs><linearGradient id="rim2" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#4ade80"/><stop offset="100%" stop-color="#22d3ee"/></linearGradient></defs>
+                </svg>
+                Loading spot data...
+              </button>
+              <button class="load-btn" style="border-color:#a78bfa;color:#a78bfa;">
+                <svg class="mini-wheel" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation-duration:0.8s;">
+                  <circle cx="80" cy="80" r="72" fill="#0f0f0f"/>
+                  <circle cx="80" cy="80" r="72" fill="none" stroke="url(#rim3)" stroke-width="8"/>
+                  <line x1="80" y1="8" x2="80" y2="152" stroke="#333" stroke-width="2"/>
+                  <line x1="8" y1="80" x2="152" y2="80" stroke="#333" stroke-width="2"/>
+                  <line x1="25" y1="25" x2="135" y2="135" stroke="#333" stroke-width="2"/>
+                  <line x1="135" y1="25" x2="25" y2="135" stroke="#333" stroke-width="2"/>
+                  <circle cx="80" cy="80" r="10" fill="#a78bfa"/>
+                  <defs><linearGradient id="rim3" x1="0" y1="0" x2="160" y2="160" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#a78bfa"/><stop offset="100%" stop-color="#f472b6"/></linearGradient></defs>
+                </svg>
+                Scanning surface...
+              </button>
+            </div>
+            <span class="status">Anchoring AR content to spot</span>
+          </div>
+        </div>
       </div>
       <div class="sb-cap">
         <p class="sb-n">01 -- Discover</p>
@@ -330,21 +460,132 @@
       </div>
     </div>
     <div class="sb-panel">
-      <div class="sb-screen" style="background:#080f08;">
-        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
-          <circle cx="44" cy="18" r="7" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <line x1="44" y1="25" x2="44" y2="46" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <line x1="44" y1="34" x2="29" y2="44" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <line x1="44" y1="34" x2="60" y2="40" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <line x1="44" y1="46" x2="35" y2="63" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <line x1="44" y1="46" x2="53" y2="64" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
-          <rect x="24" y="64" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
-          <rect x="52" y="66" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
-          <rect x="8" y="73" width="72" height="4" rx="2" fill="#1a1a1a"/>
-          <rect x="8" y="73" width="32" height="4" rx="2" fill="#4ade80"/>
-          <circle cx="40" cy="75" r="4" fill="white"/>
-          <text x="70" y="82" text-anchor="middle" font-size="5.5" fill="#a78bfa">0.25x</text>
-        </svg>
+      <div class="sb-screen" style="overflow:hidden;display:block;padding:0;position:relative;">
+        <div style="width:1520px;height:590px;transform:scale(0.183);transform-origin:top left;position:absolute;top:0;left:0;">
+          <div class="pov-wrap">
+            <div class="camera-feed">
+              <div class="env-bg"></div>
+              <div class="sky"></div>
+              <div class="horizon-line"></div>
+              <div class="ground">
+                <svg viewBox="0 0 800 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="800" height="300" fill="#0d1a0d"/>
+                  <line x1="400" y1="0" x2="0"   y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="133" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="267" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="400" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="533" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="667" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="400" y1="0" x2="800" y2="300" stroke="#1a2a1a" stroke-width="0.8"/>
+                  <line x1="0" y1="60"  x2="800" y2="60"  stroke="#161e16" stroke-width="0.5"/>
+                  <line x1="0" y1="120" x2="800" y2="120" stroke="#141c14" stroke-width="0.5"/>
+                  <line x1="0" y1="180" x2="800" y2="180" stroke="#121a12" stroke-width="0.5"/>
+                  <line x1="0" y1="240" x2="800" y2="240" stroke="#111811" stroke-width="0.5"/>
+                  <rect x="60" y="30" width="120" height="8" rx="2" fill="#0f1a0f" stroke="#1a2a1a" stroke-width="0.5" opacity="0.8"/>
+                  <rect x="620" y="50" width="90" height="6" rx="2" fill="#0f1a0f" stroke="#1a2a1a" stroke-width="0.5" opacity="0.6"/>
+                  <ellipse cx="400" cy="8" rx="180" ry="12" fill="rgba(74,222,128,0.04)"/>
+                  <line x1="200" y1="0" x2="600" y2="0" stroke="rgba(74,222,128,0.12)" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="scan-pulse"></div>
+              <svg class="ghost-figure" width="100" height="160" viewBox="0 0 100 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="14" r="12" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <circle cx="50" cy="14" r="12" fill="rgba(74,222,128,0.06)"/>
+                <line x1="50" y1="26" x2="50" y2="78" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <line x1="50" y1="46" x2="24" y2="70" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <line x1="50" y1="46" x2="78" y2="60" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <line x1="50" y1="78" x2="34" y2="118" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <line x1="50" y1="78" x2="64" y2="120" stroke="#4ade80" stroke-width="1.5" opacity="0.9"/>
+                <circle cx="24" cy="70" r="4" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/>
+                <circle cx="78" cy="60" r="4" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/>
+                <circle cx="34" cy="118" r="4" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/>
+                <circle cx="64" cy="120" r="4" fill="rgba(74,222,128,0.15)" stroke="#4ade80" stroke-width="0.8" opacity="0.7"/>
+                <line x1="20" y1="124" x2="100" y2="124" stroke="#4ade80" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+              </svg>
+              <div class="board-ghost">
+                <svg width="80" height="24" viewBox="0 0 80 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="4" y="4" width="72" height="16" rx="6" fill="rgba(34,211,238,0.08)" stroke="#22d3ee" stroke-width="1.2"/>
+                  <circle cx="18" cy="20" r="5" fill="#111" stroke="#22d3ee" stroke-width="1"/>
+                  <circle cx="62" cy="20" r="5" fill="#111" stroke="#22d3ee" stroke-width="1"/>
+                  <circle cx="18" cy="4" r="5" fill="#111" stroke="#22d3ee" stroke-width="1"/>
+                  <circle cx="62" cy="4" r="5" fill="#111" stroke="#22d3ee" stroke-width="1"/>
+                </svg>
+              </div>
+              <svg class="surface-mesh" viewBox="0 0 800 160" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="0" y1="80"  x2="800" y2="80"  stroke="#4ade80" stroke-width="0.4"/>
+                <line x1="0" y1="120" x2="800" y2="120" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="0" y1="160" x2="800" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="100" y1="80" x2="100" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="200" y1="80" x2="200" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="300" y1="80" x2="300" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="400" y1="80" x2="400" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="500" y1="80" x2="500" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="600" y1="80" x2="600" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+                <line x1="700" y1="80" x2="700" y2="160" stroke="#4ade80" stroke-width="0.3"/>
+              </svg>
+              <div class="corner-tl"></div>
+              <div class="corner-tr"></div>
+              <div class="corner-bl"></div>
+              <div class="corner-br"></div>
+              <div class="pov-label">Skater POV</div>
+              <div class="surface-lock">
+                <div class="lock-dot"></div>
+                <span class="lock-text">Surface locked / Pease Park</span>
+              </div>
+              <div class="distance-badge">Ghost anchored 6ft ahead</div>
+              <div class="body-iso">
+                <div class="iso-pill on">Feet</div>
+                <div class="iso-pill">Board</div>
+                <div class="iso-pill">Full</div>
+              </div>
+              <div class="trick-info">
+                <p class="trick-phase-label">Pop phase / frame 14 of 36</p>
+                <p class="trick-name-pov">Kickflip</p>
+              </div>
+              <div class="foot-indicators">
+                <div class="foot-tag">Back foot: heel pop</div>
+                <div class="foot-tag">Front foot: flick out</div>
+              </div>
+            </div>
+            <div class="hud-bottom">
+              <div class="scrub-row">
+                <span class="scrub-label">0:00.4 / 0:01.1</span>
+                <span class="speed-tag">0.25x slow</span>
+              </div>
+              <div class="scrubber">
+                <div class="scrub-fill"></div>
+                <div class="kf" style="left:12%"></div>
+                <div class="kf" style="left:42%"></div>
+                <div class="kf" style="left:68%"></div>
+                <div class="kf" style="left:88%"></div>
+                <div class="scrub-thumb"></div>
+              </div>
+              <div class="ctrl-row">
+                <div class="ctrl-group">
+                  <button class="ctrl-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 5v10M16 5L8 10l8 5V5z" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <button class="ctrl-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8 5L4 10l4 5" stroke="#555" stroke-width="1.5" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </button>
+                  <div class="play-btn">
+                    <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><rect x="2" y="2" width="4" height="10" rx="1" fill="#0a0a0a"/><rect x="8" y="2" width="4" height="10" rx="1" fill="#0a0a0a"/></svg>
+                  </div>
+                  <button class="ctrl-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12 5l4 5-4 5" stroke="#555" stroke-width="1.5" stroke-linecap="round"/><line x1="16" y1="10" x2="4" y2="10" stroke="#555" stroke-width="1.5" stroke-linecap="round"/></svg>
+                  </button>
+                  <button class="ctrl-icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M16 5v10M4 5l8 5-8 5V5z" stroke="#555" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                </div>
+                <div class="right-btns">
+                  <button class="action-btn btn-exit">Exit AR</button>
+                  <button class="action-btn btn-land">I landed it</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="sb-cap">
         <p class="sb-n">04 -- Learn</p>
@@ -387,7 +628,7 @@
       </div>
     </div>
     <div style="position:relative;height:400px;">
-      <img src="SK8-XR_hero.png" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" alt="SK8-XR"/>
+      <img src="angularKineticSK8XR.png" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" alt="SK8-XR angular kinetic"/>
       <div style="position:absolute;top:10px;left:10px;background:rgba(10,10,10,0.88);border:0.5px solid rgba(29,158,117,0.5);border-radius:6px;padding:6px 11px;">
         <p style="font-size:9px;color:#5DCAA5;font-weight:600;margin:0;">AR ghost overlay active</p>
       </div>
