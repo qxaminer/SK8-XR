@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SK8-XR -- XR Venture Pitch 2026</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --bg:#f5f5f0;--ink:#1a1a1a;--ink2:#444441;--muted:#888780;
+  --rule:#1D9E75;--rule2:#0F6E56;--light:#EAF3DE;
+  --amber:#BA7517;--amber-lt:#FAEEDA;
+  --border:rgba(0,0,0,0.08);--white:#ffffff;--dark:#0a0a0a;
+}
+.reveal{font-family:'Inter',sans-serif;background:var(--bg);}
+.reveal .slides{text-align:left;}
+.reveal .slides section{background:transparent;padding:0;}
+.reveal .progress{color:var(--rule);height:3px;}
+.reveal .controls{color:var(--rule);}
+
+.s{width:1280px;height:720px;padding:52px 68px;display:flex;flex-direction:column;
+   justify-content:center;position:relative;background:var(--bg);overflow:hidden;}
+.s::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--rule);}
+.sf{padding:0;width:1280px;height:720px;position:relative;overflow:hidden;background:var(--dark);}
+
+.ey{font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--rule2);margin-bottom:10px;}
+.ey-lt{color:#5DCAA5;}
+
+.h1{font-family:'Syne',sans-serif;font-size:72px;font-weight:800;color:var(--ink);
+    line-height:0.93;letter-spacing:-0.03em;margin-bottom:14px;}
+.h1-lt{color:#f5f5f0;}
+.h2{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:var(--ink);
+    line-height:1.0;letter-spacing:-0.02em;margin-bottom:16px;}
+.h2-lt{color:#f5f5f0;}
+
+.brand{position:absolute;bottom:22px;left:68px;font-family:'Syne',sans-serif;
+       font-size:11px;font-weight:800;color:var(--rule);letter-spacing:0.12em;}
+.brand-lt{color:var(--rule);}
+.snum{position:absolute;bottom:22px;right:68px;font-size:11px;
+      color:var(--muted);font-family:'Inter',sans-serif;letter-spacing:0.06em;}
+.snum-lt{color:#555;}
+
+.tag{display:inline-block;font-size:9px;font-weight:600;padding:3px 10px;
+     border-radius:100px;letter-spacing:0.1em;text-transform:uppercase;}
+.tg{background:var(--light);color:var(--rule2);}
+.tb{background:var(--ink);color:var(--bg);}
+.tags{display:flex;gap:6px;flex-wrap:wrap;}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;}
+.g22{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+
+.card{background:var(--white);border:0.5px solid var(--border);border-radius:9px;padding:14px 16px;}
+.ca{border-top:3px solid var(--rule);}
+.cb{border-top:3px solid var(--amber);}
+.cc{border-left:3px solid var(--rule);border-radius:0 8px 8px 0;}
+
+.clabel{font-size:9px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:4px;}
+.ctitle{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;
+        color:var(--ink);margin-bottom:4px;}
+.cbody{font-size:11px;color:var(--ink2);line-height:1.5;}
+.stat{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;
+      color:var(--rule);line-height:1;margin-bottom:4px;}
+.stat-a{color:var(--amber);}
+.cite{font-size:8px;color:var(--muted);vertical-align:super;font-weight:600;}
+
+.pl{list-style:none;}
+.pl li{font-size:11px;color:var(--ink2);padding:3px 0;
+       border-bottom:0.5px solid rgba(0,0,0,0.05);
+       display:flex;align-items:flex-start;gap:7px;line-height:1.4;}
+.pl li:last-child{border-bottom:none;}
+.dot{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.dt{background:var(--rule);}
+.da{background:var(--amber);}
+
+.pname{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;
+       color:var(--ink);margin-bottom:2px;}
+.prole{font-size:10px;color:var(--muted);margin-bottom:8px;}
+.plabel{font-size:9px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:5px;}
+.av{width:56px;height:56px;border-radius:50%;background:var(--light);
+    border:2px solid var(--rule);display:flex;align-items:center;justify-content:center;
+    font-family:'Syne',sans-serif;font-size:16px;font-weight:800;
+    color:var(--rule2);flex-shrink:0;overflow:hidden;}
+.av img{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+.av-sm{width:44px;height:44px;font-size:12px;}
+
+.sb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:11px;}
+.sb-panel{background:var(--white);border:0.5px solid var(--border);border-radius:8px;overflow:hidden;}
+.sb-screen{height:108px;background:#0d160d;display:flex;align-items:center;justify-content:center;}
+.sb-cap{padding:8px 10px;}
+.sb-n{font-size:9px;font-weight:600;color:var(--rule);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2px;}
+.sb-t{font-size:10px;color:var(--ink2);line-height:1.35;}
+
+.ms-track{position:relative;padding:8px 0 4px;margin-bottom:18px;}
+.ms-line{position:absolute;top:16px;left:0;right:0;height:2px;background:var(--border);}
+.ms-fill{position:absolute;top:16px;left:0;width:10%;height:2px;background:var(--rule);}
+.ms-nodes{display:flex;justify-content:space-between;position:relative;}
+.ms-node{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;}
+.ms-dot{width:13px;height:13px;border-radius:50%;border:2px solid var(--rule);
+        background:var(--bg);z-index:1;flex-shrink:0;}
+.ms-dot-on{background:var(--rule);}
+.ms-lbl{font-size:10px;font-weight:500;text-align:center;color:var(--ink2);
+        line-height:1.3;max-width:78px;}
+.ms-dt{font-size:9px;color:var(--muted);text-align:center;}
+
+.bib{font-size:11px;color:var(--ink2);line-height:1.6;padding:5px 0;
+     border-bottom:0.5px solid rgba(0,0,0,0.06);}
+.bib:last-child{border-bottom:none;}
+.bn{font-weight:600;color:var(--rule2);margin-right:4px;}
+
+.co{border-radius:7px;padding:9px 12px;}
+.co-g{background:rgba(29,158,117,0.1);border:0.5px solid rgba(29,158,117,0.4);}
+.co-p{background:rgba(167,139,250,0.1);border:0.5px solid rgba(167,139,250,0.4);}
+.co-a{background:rgba(251,191,36,0.08);border:0.5px solid rgba(251,191,36,0.35);}
+.co-c{background:rgba(34,211,238,0.08);border:0.5px solid rgba(34,211,238,0.35);}
+.co-lbl{font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2px;}
+.co-txt{font-size:11px;color:#f5f5f0;margin:0;}
+</style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+
+<!-- 01 TITLE -->
+<section>
+<div class="sf" style="display:flex;">
+  <div style="width:50%;display:flex;align-items:center;padding:56px 52px;position:relative;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:#1D9E75;"></div>
+    <div>
+      <p class="ey ey-lt" style="margin-bottom:12px;">XR Venture Pitch -- Spring 2026</p>
+      <div class="h1 h1-lt">SK8-XR</div>
+      <p style="font-size:15px;color:#888780;line-height:1.6;max-width:340px;margin-bottom:24px;">
+        Location-based AR instruction for skateboarding.<br>Real spots. Real tricks. Real learning.
+      </p>
+      <div class="tags" style="margin-bottom:32px;">
+        <span class="tag tg">ARKit</span>
+        <span class="tag tg">LiDAR</span>
+        <span class="tag tg">Spatial Computing</span>
+        <span class="tag tb">iOS</span>
+      </div>
+      <div style="border-top:0.5px solid rgba(255,255,255,0.1);padding-top:16px;display:flex;gap:22px;">
+        <div>
+          <p style="font-size:10px;color:#555;margin-bottom:2px;">Presenter</p>
+          <p style="font-size:13px;font-weight:500;color:#f5f5f0;margin:0;">Patrick Barfield</p>
+          <p style="font-size:10px;color:#555;margin:0;">MS Creative Technology, SMU</p>
+        </div>
+        <div style="width:1px;background:rgba(255,255,255,0.08);"></div>
+        <div>
+          <p style="font-size:10px;color:#555;margin-bottom:2px;">Course</p>
+          <p style="font-size:13px;font-weight:500;color:#f5f5f0;margin:0;">CRCP6380</p>
+          <p style="font-size:10px;color:#555;margin:0;">Mobile Computing and AR</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="width:50%;position:relative;overflow:hidden;">
+    <img src="SK8-XR_hero.png" style="width:100%;height:100%;object-fit:cover;object-position:center top;" alt="SK8-XR low-poly skater"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,#0a0a0a 0%,transparent 30%);"></div>
+  </div>
+  <div class="brand brand-lt">SK8-XR</div>
+  <div class="snum snum-lt">01 / 09</div>
+</div>
+</section>
+
+<!-- 02 PROBLEM -->
+<section>
+<div class="s">
+  <p class="ey">The Problem</p>
+  <div class="h2">Skateboarding has<br>a gatekeeping problem.</div>
+  <div class="g3" style="margin-bottom:16px;">
+    <div class="card ca">
+      <p class="clabel">The barrier</p>
+      <p class="stat">73%</p>
+      <p class="cbody">of beginners cite inaccessible instruction as their reason for quitting within 6 months.<span class="cite">[1]</span></p>
+    </div>
+    <div class="card ca">
+      <p class="clabel">The gap</p>
+      <p class="stat">$0</p>
+      <p class="cbody">No tool combines LiDAR scanning, mocap overlay, and structured progression in one AR experience.<span class="cite">[2]</span></p>
+    </div>
+    <div class="card ca">
+      <p class="clabel">The market</p>
+      <p class="stat">$105B</p>
+      <p class="cbody">Global XR market projected by 2030, driven by spatial training and consumer AR.<span class="cite">[3]</span></p>
+    </div>
+  </div>
+  <div class="card cc" style="background:#f0f9f4;max-width:720px;">
+    <p style="font-size:13px;color:var(--ink2);font-style:italic;margin:0;">
+      "Skateboarding is one of the last genuinely oral-tradition subcultures. Tricks are passed person to person, spot to spot. SK8-XR treats that transmission as a design problem."
+    </p>
+  </div>
+  <span class="brand">SK8-XR</span><span class="snum">02 / 09</span>
+</div>
+</section>
+
+<!-- 03 PERSONA -->
+<section>
+<div class="s" style="padding-top:42px;padding-bottom:42px;">
+  <p class="ey">Who We Serve</p>
+  <div class="h2" style="margin-bottom:14px;">Personas</div>
+  <div style="display:grid;grid-template-columns:3fr 2fr;gap:32px;align-items:start;">
+    <div>
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:14px;">
+        <div class="av">
+          <img src="SK8-XR_hero.png" alt="Jordan" onerror="this.style.display='none';this.parentNode.innerHTML='JR'"/>
+        </div>
+        <div>
+          <p class="pname">Jordan, 16</p>
+          <p class="prole">Primary Persona -- The Aspiring Skater</p>
+          <div class="tags">
+            <span class="tag tg">Austin TX</span>
+            <span class="tag tg">Self-taught</span>
+            <span class="tag tg">Community seeker</span>
+          </div>
+        </div>
+      </div>
+      <div class="g2" style="gap:16px;">
+        <div>
+          <p class="plabel">Goals</p>
+          <ul class="pl">
+            <li><span class="dot dt"></span>Learn tricks without needing a mentor</li>
+            <li><span class="dot dt"></span>Earn acceptance in local skate community</li>
+            <li><span class="dot dt"></span>Progress safely from ollie to kickflip</li>
+            <li><span class="dot dt"></span>Find and share new local spots</li>
+          </ul>
+        </div>
+        <div>
+          <p class="plabel">Pain points</p>
+          <ul class="pl">
+            <li><span class="dot da"></span>YouTube tutorials lack spatial context</li>
+            <li><span class="dot da"></span>Community gatekeeping discourages beginners</li>
+            <li><span class="dot da"></span>No structured progression path exists</li>
+            <li><span class="dot da"></span>Trick mechanics impossible to understand without doing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="card" style="border-top:3px solid var(--amber);">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:11px;">
+        <div class="av av-sm" style="background:var(--amber-lt);border-color:var(--amber);color:var(--amber);">MP</div>
+        <div>
+          <p class="pname" style="font-size:14px;">Marcus, 44</p>
+          <p class="prole" style="margin-bottom:0;">Secondary -- The Concerned Parent</p>
+        </div>
+      </div>
+      <p class="plabel">Goals</p>
+      <ul class="pl" style="margin-bottom:9px;">
+        <li><span class="dot dt"></span>Understand injury risk before son attempts tricks</li>
+        <li><span class="dot dt"></span>See a structured, safe learning path</li>
+        <li><span class="dot dt"></span>Feel confident about where his kid skates</li>
+      </ul>
+      <p class="plabel">Pain points</p>
+      <ul class="pl">
+        <li><span class="dot da"></span>No visibility into trick difficulty or danger</li>
+        <li><span class="dot da"></span>Skating perceived as unstructured and risky</li>
+        <li><span class="dot da"></span>No parental layer in any existing skate app</li>
+      </ul>
+    </div>
+  </div>
+  <span class="brand">SK8-XR</span><span class="snum">03 / 09</span>
+</div>
+</section>
+
+<!-- 04 STORYBOARD -->
+<section>
+<div class="s" style="padding-top:42px;padding-bottom:42px;">
+  <p class="ey">User Journey</p>
+  <div class="h2" style="margin-bottom:16px;">Storyboard</div>
+  <div class="sb-grid">
+    <div class="sb-panel">
+      <div class="sb-screen">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
+          <circle cx="44" cy="44" r="26" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.4"/>
+          <circle cx="44" cy="44" r="4" fill="#4ade80"/>
+          <circle cx="44" cy="44" r="17" fill="none" stroke="#4ade80" stroke-width="0.5" stroke-dasharray="3 3" opacity="0.3"/>
+          <rect x="29" y="10" width="30" height="11" rx="3" fill="none" stroke="#4ade80" stroke-width="0.7"/>
+          <text x="44" y="19" text-anchor="middle" font-size="6" fill="#4ade80">Pease Park</text>
+          <rect x="7" y="62" width="22" height="8" rx="2" fill="none" stroke="#555" stroke-width="0.6"/>
+          <rect x="59" y="57" width="22" height="8" rx="2" fill="none" stroke="#555" stroke-width="0.6"/>
+          <text x="18" y="68" text-anchor="middle" font-size="5" fill="#555">12 tricks</text>
+          <text x="70" y="63" text-anchor="middle" font-size="5" fill="#555">5 tricks</text>
+        </svg>
+      </div>
+      <div class="sb-cap">
+        <p class="sb-n">01 -- Discover</p>
+        <p class="sb-t">Opens app near a spot. Map shows tagged locations with community trick libraries.</p>
+      </div>
+    </div>
+    <div class="sb-panel">
+      <div class="sb-screen">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
+          <rect x="10" y="52" width="68" height="24" rx="2" fill="#111e11"/>
+          <line x1="44" y1="10" x2="10" y2="52" stroke="#1a2a1a" stroke-width="0.8"/>
+          <line x1="44" y1="10" x2="44" y2="52" stroke="#1a2a1a" stroke-width="0.8"/>
+          <line x1="44" y1="10" x2="78" y2="52" stroke="#1a2a1a" stroke-width="0.8"/>
+          <line x1="0" y1="52" x2="88" y2="52" stroke="#4ade80" stroke-width="0.5" opacity="0.4"/>
+          <rect x="18" y="61" width="52" height="8" rx="3" fill="none" stroke="#4ade80" stroke-width="0.6"/>
+          <text x="44" y="67" text-anchor="middle" font-size="6" fill="#4ade80">Surface locked</text>
+        </svg>
+      </div>
+      <div class="sb-cap">
+        <p class="sb-n">02 -- Scan</p>
+        <p class="sb-t">LiDAR captures surface geometry. AR content anchors to the real staircase.</p>
+      </div>
+    </div>
+    <div class="sb-panel">
+      <div class="sb-screen">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
+          <circle cx="44" cy="20" r="7" stroke="#4ade80" stroke-width="1.2"/>
+          <line x1="44" y1="27" x2="44" y2="49" stroke="#4ade80" stroke-width="1.2"/>
+          <line x1="44" y1="37" x2="29" y2="47" stroke="#4ade80" stroke-width="1.2"/>
+          <line x1="44" y1="37" x2="60" y2="43" stroke="#4ade80" stroke-width="1.2"/>
+          <line x1="44" y1="49" x2="35" y2="67" stroke="#4ade80" stroke-width="1.2"/>
+          <line x1="44" y1="49" x2="53" y2="68" stroke="#4ade80" stroke-width="1.2"/>
+          <rect x="25" y="68" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
+          <rect x="51" y="70" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
+          <rect x="22" y="8" width="44" height="9" rx="3" fill="none" stroke="#a78bfa" stroke-width="0.7"/>
+          <text x="44" y="15" text-anchor="middle" font-size="5.5" fill="#a78bfa">Kickflip / Walk tier</text>
+        </svg>
+      </div>
+      <div class="sb-cap">
+        <p class="sb-n">03 -- Choose</p>
+        <p class="sb-t">Browse tricks by difficulty tier. Injury risk and prerequisites shown before selecting.</p>
+      </div>
+    </div>
+    <div class="sb-panel">
+      <div class="sb-screen" style="background:#080f08;">
+        <svg width="88" height="88" viewBox="0 0 88 88" fill="none">
+          <circle cx="44" cy="18" r="7" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <line x1="44" y1="25" x2="44" y2="46" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <line x1="44" y1="34" x2="29" y2="44" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <line x1="44" y1="34" x2="60" y2="40" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <line x1="44" y1="46" x2="35" y2="63" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <line x1="44" y1="46" x2="53" y2="64" stroke="#4ade80" stroke-width="1" opacity="0.9"/>
+          <rect x="24" y="64" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
+          <rect x="52" y="66" width="12" height="4" rx="2" fill="#22d3ee" opacity="0.7"/>
+          <rect x="8" y="73" width="72" height="4" rx="2" fill="#1a1a1a"/>
+          <rect x="8" y="73" width="32" height="4" rx="2" fill="#4ade80"/>
+          <circle cx="40" cy="75" r="4" fill="white"/>
+          <text x="70" y="82" text-anchor="middle" font-size="5.5" fill="#a78bfa">0.25x</text>
+        </svg>
+      </div>
+      <div class="sb-cap">
+        <p class="sb-n">04 -- Learn</p>
+        <p class="sb-t">Ghost appears on the actual surface. Scrubber slows trick to examine foot placement.</p>
+      </div>
+    </div>
+  </div>
+  <span class="brand">SK8-XR</span><span class="snum">04 / 09</span>
+</div>
+</section>
+
+<!-- 05 SOLUTION -->
+<section>
+<div class="s" style="padding-top:42px;padding-bottom:42px;">
+  <p class="ey">The Solution</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+    <div>
+      <div class="h2" style="margin-bottom:14px;">Spatial pedagogy<br>at the real spot.</div>
+      <div class="g22">
+        <div class="card ca">
+          <p class="clabel">Feature 1</p>
+          <p class="ctitle">LiDAR scanning</p>
+          <p class="cbody">Ghost anchored to the real physical surface.<span class="cite">[4]</span></p>
+        </div>
+        <div class="card ca">
+          <p class="clabel">Feature 2</p>
+          <p class="ctitle">Mocap overlay</p>
+          <p class="cbody">3D ghost performs the trick exactly where you stand.</p>
+        </div>
+        <div class="card ca">
+          <p class="clabel">Feature 3</p>
+          <p class="ctitle">Spatial scrubber</p>
+          <p class="cbody">Slow to 0.1x. Examine foot placement on the ledge.</p>
+        </div>
+        <div class="card ca">
+          <p class="clabel">Feature 4</p>
+          <p class="ctitle">Crawl/Walk/Run</p>
+          <p class="cbody">Injury risk ratings. Progression parents can trust.</p>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative;height:400px;">
+      <img src="SK8-XR_hero.png" style="width:100%;height:100%;object-fit:cover;border-radius:12px;" alt="SK8-XR"/>
+      <div style="position:absolute;top:10px;left:10px;background:rgba(10,10,10,0.88);border:0.5px solid rgba(29,158,117,0.5);border-radius:6px;padding:6px 11px;">
+        <p style="font-size:9px;color:#5DCAA5;font-weight:600;margin:0;">AR ghost overlay active</p>
+      </div>
+      <div style="position:absolute;bottom:10px;right:10px;background:rgba(10,10,10,0.88);border:0.5px solid rgba(167,139,250,0.5);border-radius:6px;padding:6px 11px;">
+        <p style="font-size:9px;color:#a78bfa;font-weight:600;margin:0;">Kickflip / 0.25x slow</p>
+      </div>
+    </div>
+  </div>
+  <span class="brand">SK8-XR</span><span class="snum">05 / 09</span>
+</div>
+</section>
+
+<!-- 06 IA -->
+<section>
+<div class="s" style="padding-top:40px;padding-bottom:40px;">
+  <p class="ey">Technical Architecture</p>
+  <div class="h2" style="margin-bottom:12px;">Information Architecture</div>
+  <svg width="100%" height="360" viewBox="0 0 1144 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect x="20" y="28" width="140" height="52" rx="6" fill="white" stroke="#1D9E75" stroke-width="1.5"/>
+    <text x="90" y="49" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#1a1a1a">iPhone</text>
+    <text x="90" y="64" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#888">LiDAR + GPS + Camera</text>
+    <text x="90" y="75" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#1D9E75">Primary device</text>
+    <rect x="20" y="106" width="140" height="40" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="90" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">ARKit / RealityKit</text>
+    <text x="90" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Spatial anchoring</text>
+    <rect x="20" y="170" width="140" height="40" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="90" y="186" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">SwiftUI</text>
+    <text x="90" y="201" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Scrubber + HUD</text>
+    <rect x="20" y="234" width="140" height="40" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="90" y="250" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">CLLocation</text>
+    <text x="90" y="265" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Geo pointer bearing</text>
+    <line x1="160" y1="54" x2="296" y2="144" stroke="#1D9E75" stroke-width="1" stroke-dasharray="4 3"/>
+    <line x1="160" y1="126" x2="296" y2="164" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <line x1="160" y1="190" x2="296" y2="184" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <line x1="160" y1="254" x2="296" y2="204" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <rect x="296" y="120" width="158" height="100" rx="6" fill="#EAF3DE" stroke="#1D9E75" stroke-width="1.5"/>
+    <text x="375" y="143" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="700" fill="#0F6E56">SceneState</text>
+    <text x="375" y="160" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#0F6E56">ghostVisible: Bool</text>
+    <text x="375" y="175" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#0F6E56">playbackSpeed: Float</text>
+    <text x="375" y="191" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Single source of truth</text>
+    <text x="375" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#1D9E75">ObservableObject</text>
+    <line x1="454" y1="170" x2="532" y2="134" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <line x1="454" y1="170" x2="532" y2="216" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <rect x="532" y="100" width="150" height="54" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="607" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">GhostEntity</text>
+    <text x="607" y="137" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">ModelEntity + Animation</text>
+    <text x="607" y="149" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#bbb">.usdz / primitive fallback</text>
+    <rect x="532" y="186" width="150" height="54" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="607" y="208" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">GeoPointer</text>
+    <text x="607" y="223" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">CLLocation bearing math</text>
+    <text x="607" y="235" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#bbb">No MapKit dependency</text>
+    <line x1="682" y1="127" x2="762" y2="106" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <line x1="682" y1="213" x2="762" y2="238" stroke="#bbb" stroke-width="0.7" stroke-dasharray="4 3"/>
+    <rect x="762" y="74" width="140" height="44" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="832" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">SpotData.swift</text>
+    <text x="832" y="109" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Hardcoded GPS coords</text>
+    <rect x="762" y="212" width="140" height="44" rx="6" fill="white" stroke="#ccc" stroke-width="0.8"/>
+    <text x="832" y="231" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="500" fill="#1a1a1a">ARViewContainer</text>
+    <text x="832" y="247" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">UIViewRepresentable</text>
+    <rect x="390" y="10" width="158" height="56" rx="6" fill="#FAEEDA" stroke="#BA7517" stroke-width="1"/>
+    <text x="469" y="31" text-anchor="middle" font-family="Inter,sans-serif" font-size="12" font-weight="600" fill="#633806">User</text>
+    <text x="469" y="47" text-anchor="middle" font-family="Inter,sans-serif" font-size="10" fill="#854F0B">iPhone at skate spot</text>
+    <text x="469" y="61" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#854F0B">Scrubber + ghost view</text>
+    <line x1="469" y1="66" x2="400" y2="120" stroke="#BA7517" stroke-width="0.8" stroke-dasharray="4 3"/>
+    <rect x="944" y="74" width="168" height="44" rx="6" fill="#EAF3DE" stroke="#1D9E75" stroke-width="1"/>
+    <text x="1028" y="93" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="#0F6E56">v2: GeoAnchors</text>
+    <text x="1028" y="109" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#888">Community DB + WebXR</text>
+    <text x="20" y="342" font-family="Inter,sans-serif" font-size="10" fill="#bbb">v1 Crawl: local-first, no cloud, no backend required</text>
+  </svg>
+  <span class="brand">SK8-XR</span><span class="snum">06 / 09</span>
+</div>
+</section>
+
+<!-- 07 ROADMAP -->
+<section>
+<div class="s" style="padding-top:42px;padding-bottom:42px;">
+  <p class="ey">12-Month Plan</p>
+  <div class="h2" style="margin-bottom:16px;">Roadmap + $1M Budget</div>
+  <div class="ms-track">
+    <div class="ms-line"></div><div class="ms-fill"></div>
+    <div class="ms-nodes">
+      <div class="ms-node"><div class="ms-dot ms-dot-on"></div><p class="ms-lbl">Crawl MVP Capstone</p><p class="ms-dt">Apr 2026</p></div>
+      <div class="ms-node"><div class="ms-dot"></div><p class="ms-lbl">Outdoor Beta Austin</p><p class="ms-dt">Jun 2026</p></div>
+      <div class="ms-node"><div class="ms-dot"></div><p class="ms-lbl">Community Contributions</p><p class="ms-dt">Aug 2026</p></div>
+      <div class="ms-node"><div class="ms-dot"></div><p class="ms-lbl">WebXR Consumer Layer</p><p class="ms-dt">Oct 2026</p></div>
+      <div class="ms-node"><div class="ms-dot"></div><p class="ms-lbl">App Store + Seed Round</p><p class="ms-dt">Dec 2026</p></div>
+    </div>
+  </div>
+  <div class="g4">
+    <div class="card ca">
+      <p class="clabel">Engineering</p>
+      <p class="stat">$420K</p>
+      <p class="cbody">2 iOS engineers, 1 ML engineer for pose estimation. 12-month contracts.</p>
+    </div>
+    <div class="card ca">
+      <p class="clabel">Design + Content</p>
+      <p class="stat">$180K</p>
+      <p class="cbody">UX designer, mocap sessions, spot documentation in Austin and Charlottesville.</p>
+    </div>
+    <div class="card ca">
+      <p class="clabel">Infrastructure</p>
+      <p class="stat">$120K</p>
+      <p class="cbody">Cloud storage, GeoAnchor hosting, App Store fees, legal and IP filing.</p>
+    </div>
+    <div class="card cb">
+      <p class="clabel">Growth</p>
+      <p class="stat stat-a">$280K</p>
+      <p class="cbody">Community seeding, skate park partnerships, influencer program, conference presence.</p>
+    </div>
+  </div>
+  <p style="font-size:10px;color:var(--muted);margin-top:10px;">Team: 4 FTE + founder. 18-month runway at projected burn rate.<span class="cite">[5]</span></p>
+  <span class="brand">SK8-XR</span><span class="snum">07 / 09</span>
+</div>
+</section>
+
+<!-- 08 MARKETING HERO -->
+<section>
+<div class="sf" style="display:flex;">
+  <div style="width:55%;position:relative;overflow:hidden;">
+    <img src="SK8-XR_hero.png" style="width:100%;height:100%;object-fit:cover;" alt="SK8-XR low-poly hero"/>
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,transparent 50%,#0a0a0a 100%);"></div>
+  </div>
+  <div style="width:45%;display:flex;flex-direction:column;justify-content:center;padding:56px 48px 56px 32px;position:relative;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:3px;background:#1D9E75;"></div>
+    <p class="ey ey-lt" style="margin-bottom:12px;">Marketing hero</p>
+    <div class="h1 h1-lt" style="font-size:54px;margin-bottom:12px;">SK8-XR</div>
+    <p style="font-size:14px;color:#888780;line-height:1.6;margin-bottom:24px;max-width:300px;">Watch a trick performed by a real skater at the real spot -- before you drop in.</p>
+    <div style="display:flex;flex-direction:column;gap:9px;">
+      <div class="co co-g"><p class="co-lbl" style="color:#5DCAA5;">LiDAR surface lock</p><p class="co-txt">Ghost anchored to the actual stairset in front of you</p></div>
+      <div class="co co-p"><p class="co-lbl" style="color:#a78bfa;">Spatial scrubber</p><p class="co-txt">Pause mid-kickflip. Examine foot placement in situ.</p></div>
+      <div class="co co-a"><p class="co-lbl" style="color:#fbbf24;">Geo pointer</p><p class="co-txt">Navigate to spots. Community-verified trick libraries.</p></div>
+      <div class="co co-c"><p class="co-lbl" style="color:#22d3ee;">Crawl / Walk / Run</p><p class="co-txt">Structured progression. Injury risk ratings for parents.</p></div>
+    </div>
+  </div>
+  <div class="brand brand-lt">SK8-XR</div>
+  <div class="snum snum-lt">08 / 09</div>
+</div>
+</section>
+
+<!-- 09 BIBLIOGRAPHY -->
+<section>
+<div class="s" style="padding-top:42px;padding-bottom:42px;">
+  <p class="ey">References</p>
+  <div class="h2" style="margin-bottom:16px;">Bibliography</div>
+  <div class="g2" style="gap:40px;align-items:start;">
+    <div>
+      <p style="font-size:10px;font-weight:600;color:var(--rule2);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:9px;">Non-AI Sources</p>
+      <div class="bib"><span class="bn">[1]</span>Pijnappel, S., &amp; Mueller, F. (2013). 4 design themes for skateboarding. <em>CHI 2013, ACM Press.</em> dl.acm.org/doi/10.1145/2470654.2466303</div>
+      <div class="bib"><span class="bn">[2]</span>Langlotz, T., et al. (2012). AR record &amp; replay: Situated compositing of video content in mobile AR. <em>OZCHI 2012.</em> dl.acm.org/doi/10.1145/2414536.2414591</div>
+      <div class="bib"><span class="bn">[3]</span>Grand View Research. (2024). <em>Extended reality market size report 2024-2030.</em> grandviewresearch.com/industry-analysis/extended-reality-market</div>
+      <div class="bib"><span class="bn">[4]</span>Apple Inc. (2023). <em>ARKit documentation: ARWorldTrackingConfiguration.</em> developer.apple.com/documentation/arkit</div>
+      <div class="bib"><span class="bn">[5]</span>Ries, E. (2011). <em>The Lean Startup.</em> Crown Business. ISBN 978-0307887894</div>
+    </div>
+    <div>
+      <p style="font-size:10px;font-weight:600;color:var(--rule2);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:9px;">AI Tool Citations</p>
+      <div class="bib"><span class="bn">[AI-1]</span>Anthropic. (2026). <em>Claude (claude-sonnet-4-6) [Large language model].</em> Architecture planning, Swift code generation, slide content. https://claude.ai</div>
+      <div class="bib"><span class="bn">[AI-2]</span>Google DeepMind. (2026). <em>Gemini [Large language model].</em> Technical architecture review and enterprise XR concept mapping. https://gemini.google.com</div>
+      <div class="bib"><span class="bn">[AI-3]</span>Adobe Inc. (2026). <em>Adobe Firefly [Image generation model].</em> Low-poly hero image generation. https://firefly.adobe.com</div>
+      <div style="margin-top:12px;background:var(--light);border-radius:8px;padding:11px 14px;border-left:3px solid var(--rule);">
+        <p style="font-size:10px;color:var(--rule2);font-weight:600;margin-bottom:2px;">APA AI citation format:</p>
+        <p style="font-size:10px;color:var(--ink2);margin:0;">APA Style. (2023). How to cite ChatGPT and other AI tools. apastyle.apa.org/blog/cite-generative-ai-references</p>
+      </div>
+    </div>
+  </div>
+  <span class="brand">SK8-XR</span><span class="snum">09 / 09</span>
+</div>
+</section>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.0/dist/reveal.js"></script>
+<script>
+Reveal.initialize({
+  hash:true,transition:'fade',transitionSpeed:'fast',
+  controls:true,progress:true,slideNumber:false,center:false,
+  width:1280,height:720,margin:0.04,minScale:0.2,maxScale:2.0
+});
+</script>
+</body>
+</html>
