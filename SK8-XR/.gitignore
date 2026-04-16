@@ -1,0 +1,84 @@
+# ============================================================
+# Xcode + Swift + macOS .gitignore
+# ============================================================
+
+# ----- Xcode Build Artifacts --------------------------------
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcuserstate
+xcuserdata/
+xcshareddata/
+
+# ----- Xcode Checkouts & Moves ------------------------------
+*.xccheckout
+*.moved-aside
+
+# ----- Xcode Previews ---------------------------------------
+*.xcscmblueprint
+
+# ----- Swift Package Manager --------------------------------
+.build/
+.swiftpm/
+Package.resolved
+
+# ----- CocoaPods --------------------------------------------
+Pods/
+Podfile.lock
+
+# ----- Carthage ---------------------------------------------
+Carthage/Build/
+Carthage/Checkouts/
+
+# ----- Tuist ------------------------------------------------
+graph.json
+Derived/
+
+# ----- macOS ------------------------------------------------
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ----- iOS Simulator ----------------------------------------
+*.dSYM.zip
+*.dSYM
+
+# ----- Playgrounds ------------------------------------------
+timeline.xctimeline
+playground.xcworkspace
+
+# ----- Fastlane ---------------------------------------------
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# ----- Archives & Exports -----------------------------------
+*.ipa
+*.xcarchive
+
+# ----- Credentials & Secrets --------------------------------
+*.mobileprovision
+*.cer
+*.p12
+*.p8
+
+# ----- Editor & IDE -----------------------------------------
+.idea/
+*.swp
+*~
